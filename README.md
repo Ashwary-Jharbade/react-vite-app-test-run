@@ -14,7 +14,7 @@ export default defineConfig({
 ```
  -  npm install --save-dev vite-preset-react
  -  npm install --save-dev vite-plugin-svgr
-#### Update vite.config.js
+#### Updated vite.config.js
 ``` javascript
 import { defineConfig } from 'vite'
 import react from "vite-preset-react";
