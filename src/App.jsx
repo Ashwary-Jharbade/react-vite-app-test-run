@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import Button from './Button';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Button width="800"></Button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
@@ -25,7 +27,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learn React <Button width="100"></Button>
           </a>
           {' | '}
           <a
@@ -38,6 +40,7 @@ function App() {
           </a>
         </p>
       </header>
+      <Button width="500"></Button>
     </div>
   )
 }
