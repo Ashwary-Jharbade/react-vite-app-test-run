@@ -1,27 +1,19 @@
-import React from "react";
+export default Screen = (props) => {
+  const styling = {
+    margin: "20px",
+    fontSize: "40px",
+    backgroundColor: "rgb(198 198 198)",
+  };
 
-export default class Screen extends React.Component {
-  constructor(props) {
-    super(props);
+  const paraStyle = {
+    textAlign: "right",
+  };
 
-    this.styling = {
-      margin: "20px",
-      fontSize: "40px",
-      backgroundColor: "rgb(198 198 198)",
-    };
-
-    this.paraStyle = {
-      textAlign: "right",
-    };
-  }
-
-  render() {
-    return (
-      <>
-        <div style={this.styling}>
-          <p style={this.paraStyle}>{this.props.expression}</p>
-        </div>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <div style={styling}>
+        <p style={paraStyle}>{props.expression}</p>
+      </div>
+    </>
+  );
+};
