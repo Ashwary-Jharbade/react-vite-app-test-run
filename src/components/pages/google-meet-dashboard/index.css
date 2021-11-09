@@ -1,0 +1,25 @@
+.dashboardBG {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #202124;
+}
+
+.rightMountedContainer {
+  width: 30%;
+  height: max-content;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .rightMountedContainer {
+    width: 200px;
+  }
+}

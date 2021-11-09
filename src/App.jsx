@@ -1,7 +1,10 @@
+import "./App.css";
+import GoogleMeetDashboard from "./components/pages/google-meet-dashboard";
+
 function App() {
   return (
     <>
-      <h1>Main Component</h1>
+      <GoogleMeetDashboard></GoogleMeetDashboard>
     </>
   );
 }
