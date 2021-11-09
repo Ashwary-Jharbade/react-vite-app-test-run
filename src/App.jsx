@@ -1,9 +1,7 @@
-import Calculator from "./feature/Calculator";
-
 function App() {
   return (
     <>
-      <Calculator />
+      <h1>Main Component</h1>
     </>
   );
 }
