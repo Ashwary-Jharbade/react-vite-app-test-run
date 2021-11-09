@@ -1,4 +1,4 @@
-﻿### React Vite app test run
+﻿### React Vite app setup and test run
  
  >  Steps to install React Vite App.
  -  npm init @vitejs/app (Once entered type folder name and select react library)
