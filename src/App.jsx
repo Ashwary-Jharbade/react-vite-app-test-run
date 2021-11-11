@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TextView from "./components/TextView";
 import AddTwoNum from "./components/AddTwoNum";
+import CompA from "./components/CompA";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +20,8 @@ function App() {
       >
         Button {count}
       </button>
+
+      <CompA></CompA>
     </>
   );
 }
