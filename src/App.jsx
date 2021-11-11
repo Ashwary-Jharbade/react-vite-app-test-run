@@ -1,7 +1,10 @@
+import CompB from "./components/CompB";
+
 function App() {
   return (
     <>
-      <h1>Main Component</h1>
+      <h4>App Component</h4>
+      <CompB></CompB>
     </>
   );
 }

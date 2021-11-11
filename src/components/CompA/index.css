@@ -1,0 +1,25 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #20232a;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContent {
+  color: #fabb45;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: center;
+}
+
+.box button {
+  background-color: #5a76bb;
+  color: #ebffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

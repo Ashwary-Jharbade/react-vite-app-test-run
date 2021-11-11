@@ -1,0 +1,9 @@
+.toggleBtn {
+  background-color: #5a76bb;
+  color: #ebffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
