@@ -1,7 +1,10 @@
+// import BasicForm from "./components/UseStateHook/index";
+import GetPost from "./components/UseEffectHook";
 function App() {
   return (
     <>
-      <h1>Main Component</h1>
+      {/* <BasicForm></BasicForm> */}
+      <GetPost></GetPost>
     </>
   );
 }
