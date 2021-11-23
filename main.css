@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eef4f7;
+}
+
+.light .navbar {
+  background-color: #0a46a0;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  color: #ffffff;
+}
+
+.light .navbar .container {
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.light .navbar .brand {
+  font-size: 22px;
+}
+
+.light .navbar .toggleContainer {
+  height: 20px;
+  width: 50px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.light .navbar .toggleSwitch {
+  height: 20px;
+  width: 20px;
+  background-color: #0a46a0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.light .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  background-color: white;
+  color: #0a46a0;
+}
+
+.light .sidebar {
+  height: 100%;
+  width: 100%;
+  background-color: #d7dfe7;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+
+.light .sidebar .sidebarItems {
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.light .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+  .light .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.light .homeSidebar {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  height: 100vh;
+  color: #333e49;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .light .homeSidebar {
+    overflow: auto;
+  }
+}
+
+.light .homeContent {
+  -webkit-box-flex: 7.5;
+      -ms-flex: 7.5;
+          flex: 7.5;
+}
+
+.dark .navbar {
+  background-color: #1f2831;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  color: #ffffff;
+}
+
+.dark .navbar .container {
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.dark .navbar .brand {
+  font-size: 22px;
+}
+
+.dark .navbar .toggleContainer {
+  height: 20px;
+  width: 50px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dark .navbar .toggleSwitch {
+  height: 20px;
+  width: 20px;
+  background-color: #1f2831;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dark .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  background-color: white;
+  color: #1f2831;
+}
+
+.dark .sidebar {
+  height: 100%;
+  width: 100%;
+  background-color: #1f283194;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+
+.dark .sidebar .sidebarItems {
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.dark .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+  .dark .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.dark .homeSidebar {
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  height: 100vh;
+  color: #f0f0f0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .dark .homeSidebar {
+    overflow: auto;
+  }
+}
+
+.dark .homeContent {
+  -webkit-box-flex: 7.5;
+      -ms-flex: 7.5;
+          flex: 7.5;
+}
+/*# sourceMappingURL=main.css.map */

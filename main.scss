@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+$white: #ffffff;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eef4f7;
+}
+
+@mixin theme($primaryColor, $secondaryColor, $accentColor, $textColor, $basic) {
+  .navbar {
+    background-color: $basic;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    color: $white;
+    .container {
+      margin: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .brand {
+      font-size: 22px;
+    }
+
+    .toggleContainer {
+      height: 20px;
+      width: 50px;
+      background-color: $white;
+      border-radius: 15px;
+      border: 2px solid $white;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .toggleSwitch {
+      height: 20px;
+      width: 20px;
+      background-color: $basic;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+    color: $basic;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 100%;
+    background-color: $secondaryColor;
+    padding: 20px 20px;
+    font-weight: bold;
+    .sidebarItems {
+      cursor: pointer;
+      padding: 5px;
+      margin: 10px 0;
+    }
+  }
+
+  .home {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .homeSidebar {
+    flex: 2.5;
+    height: 100vh;
+    color: $textColor;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 500px) {
+      overflow: auto;
+    }
+  }
+
+  .homeContent {
+    flex: 7.5;
+  }
+}
+
+.light {
+  @include theme(#eef4f7, #d7dfe7, #0a46a0, #333e49, #0a46a0);
+}
+
+.dark {
+  @include theme(#181e24, #1f283194, #4b5866, #f0f0f0, #1f2831);
+}
