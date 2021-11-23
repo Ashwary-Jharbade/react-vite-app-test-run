@@ -1,0 +1,43 @@
+.brand {
+  display: block;
+  color: #0c003f;
+  font-size: 40px;
+  letter-spacing: 8px;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;
+  background: #ffdbd0;
+  background-image: linear-gradient(#ff221b, #ff0606);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.brandAlignment {
+  margin: "5px";
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.margin-5px {
+  margin: 5px;
+}
+
+.margin-10px {
+  margin: 5px;
+}
+
+.padding-5px {
+  margin: 5px;
+}
+
+.padding-10px {
+  margin: 5px;
+}
+
+.card-container {
+  border-bottom: 2px solid black;
+}

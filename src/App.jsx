@@ -1,7 +1,8 @@
+import MovieList from "./components/MovieList.jsx";
 function App() {
   return (
     <>
-      <h1>Main Component</h1>
+      <MovieList></MovieList>
     </>
   );
 }
