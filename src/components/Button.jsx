@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 const Button = ({ label, handler }) => {
   console.log("Rendered", label);
   return (
@@ -9,4 +7,4 @@ const Button = ({ label, handler }) => {
   );
 };
 
-export default memo(Button);
+export default Button;

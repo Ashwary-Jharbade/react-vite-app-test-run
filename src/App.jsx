@@ -1,9 +1,9 @@
-import ComponentA from "./components/ComponentA";
+import { Banking } from "./components/Banking";
 
 function App() {
   return (
     <>
-      <ComponentA></ComponentA>
+      <Banking></Banking>
     </>
   );
 }
