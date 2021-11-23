@@ -1,7 +1,9 @@
+import ComponentA from "./components/ComponentA";
+
 function App() {
   return (
     <>
-      <h1>Main Component</h1>
+      <ComponentA></ComponentA>
     </>
   );
 }
