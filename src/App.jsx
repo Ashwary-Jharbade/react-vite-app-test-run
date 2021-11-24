@@ -1,16 +1,32 @@
 import { useEffect, useState } from "react";
 import Input from "./components/Input";
-import debounce from "./utilities/debounce";
+
+const cacher = () => {
+  let debounceTimer;
+  return (args) => {
+    clearTimeout(debounceTimer);
+    const apiLogger = () => {
+      const url = `https://jsonplaceholder.typicode.com/comments?postId=${args}`;
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    debounceTimer = setTimeout(apiLogger, 3000);
+  };
+};
+const debounce = cacher();
 
 function App() {
-  const [search, setSearch] = useState("");
-
-  const _logger = () => {
-    console.log(search);
-  };
+  const [search, setSearch] = useState("1");
 
   useEffect(() => {
-    debounce(_logger(), 10000);
+    debounce(search);
   }, [search]);
 
   const _searchValueHandler = (e) => {
