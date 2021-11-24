@@ -1,7 +1,18 @@
+import AutoFocus from "./components/AutoFocus";
+import InputSubmit from "./components/InputSubmit";
+import Otp from "./components/Otp";
+
 function App() {
   return (
     <>
-      <h1>Main Component</h1>
+      {/* <div>
+        <AutoFocus></AutoFocus>
+      </div>
+      <br />
+      <div>
+        <InputSubmit></InputSubmit>
+      </div> */}
+      <Otp></Otp>
     </>
   );
 }
