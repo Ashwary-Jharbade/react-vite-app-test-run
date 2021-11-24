@@ -7,6 +7,7 @@ import Text from "./Text";
 import Others from "./Others";
 import Interest from "./Interest";
 import Button from "./Button";
+import DummyContent from "./DummyContent";
 
 const balanceContext = createContext(0);
 
@@ -75,6 +76,12 @@ const Banking = () => {
           label={"Decrease Interest Rate"}
           handler={_decreaseInterestRateHandler}
         ></Button>
+      </div>
+
+      <div>
+        <balanceContext.Provider value={{ name: "Ashwary", city: "Bhopal" }}>
+          <DummyContent></DummyContent>
+        </balanceContext.Provider>
       </div>
     </>
   );
