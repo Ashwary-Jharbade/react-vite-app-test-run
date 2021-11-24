@@ -82,7 +82,7 @@ body {
   }
 
   .homeSidebar {
-    flex: 2.5;
+    flex: 3;
     height: 100vh;
     color: $textColor;
     overflow-y: scroll;
@@ -94,14 +94,21 @@ body {
   }
 
   .homeContent {
-    flex: 7.5;
+    flex: 7;
+    color: $textColor;
   }
 }
 
 .light {
+  width: 100%;
+  height: fit-content;
+  background-color: #eef4f7;
   @include theme(#eef4f7, #d7dfe7, #0a46a0, #333e49, #0a46a0);
 }
 
 .dark {
-  @include theme(#181e24, #1f283194, #4b5866, #f0f0f0, #1f2831);
+  width: 100%;
+  height: fit-content;
+  background-color: #181e24;
+  @include theme(#181e24, #1f2831, #4b5866, #f0f0f0, #2b3844);
 }
