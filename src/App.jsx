@@ -6,21 +6,32 @@ const cacher = () => {
   let debounceTimer;
   return (args) => {
     clearTimeout(debounceTimer);
-    const apiLogger = async () => {
-      const url = `https://jsonplaceholder.typicode.com/photos/${args}`;
-      const data = await axios.get(url);
-      console.log(data.data);
-    };
-    debounceTimer = setTimeout(apiLogger, 3000);
+    const promiseData = new Promise((resolve, reject) => {
+      debounceTimer = setTimeout(async () => {
+        const url = `https://jsonplaceholder.typicode.com/photos/${args}`;
+        const data = await axios.get(url);
+        resolve(data.data);
+      }, 3000);
+    });
+    return promiseData;
   };
 };
 const debounce = cacher();
 
 function App() {
   const [search, setSearch] = useState("1");
+  const [photo, setPhoto] = useState({});
 
   useEffect(() => {
-    debounce(search);
+    const func = async () => {
+      const data = await debounce(search);
+      setPhoto({
+        ...photo,
+        ...data,
+      });
+    };
+
+    func();
   }, [search]);
 
   const _searchValueHandler = (e) => {
@@ -31,6 +42,7 @@ function App() {
     setSearch(value);
   };
 
+  const { albumId, id, title, url, thumbnailUrl } = photo;
   return (
     <>
       <Input
@@ -40,6 +52,16 @@ function App() {
         value={search}
         handler={_searchValueHandler}
       ></Input>
+      <div>
+        <br />
+        <div>
+          <div>Album Id: {albumId}</div>
+          <div> Id: {id}</div>
+          <div>Title: {title}</div>
+          <div>Url: {url}</div>
+          <div>Thumbnail Url:{thumbnailUrl}</div>
+        </div>
+      </div>
     </>
   );
 }
