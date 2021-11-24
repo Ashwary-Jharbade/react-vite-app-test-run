@@ -1,22 +1,16 @@
 import { useEffect, useState } from "react";
 import Input from "./components/Input";
+import axios from "axios";
 
 const cacher = () => {
   let debounceTimer;
   return (args) => {
     clearTimeout(debounceTimer);
-    const apiLogger = () => {
-      const url = `https://jsonplaceholder.typicode.com/comments?postId=${args}`;
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    const apiLogger = async () => {
+      const url = `https://jsonplaceholder.typicode.com/photos/${args}`;
+      const data = await axios.get(url);
+      console.log(data.data);
     };
-
     debounceTimer = setTimeout(apiLogger, 3000);
   };
 };
