@@ -18,7 +18,7 @@ const MovieList = () => {
       return;
     }
     const data = await getData(
-      `https://api.themoviedb.org/3/discover/movie?api_key=47071116ad3913e09389a88eb1f895b6&primary_release_year=2017&sort_by=revenue.desc`
+      `https://api.themoviedb.org/3/discover/movie?api_key={MANUALLY_WRITE_API_KEY_HERE}&primary_release_year=2017&sort_by=revenue.desc`
     );
     const { results, total_pages } = data;
     setMovieList(results);
