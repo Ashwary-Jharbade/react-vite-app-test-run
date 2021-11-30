@@ -1,7 +1,8 @@
+import Navigation from "./navigation";
 function App() {
   return (
     <>
-      <h1>Main Component</h1>
+      <Navigation></Navigation>
     </>
   );
 }
