@@ -1,24 +1,31 @@
+import { Link } from "react-router-dom";
+
 const Counter = (props) => {
-  console.log(props);
   const { counter, increment, decrement } = props;
   return (
     <>
       <h3>Counter App</h3>
       <h4>Counter Value '{counter}'</h4>
-      <button
-        onClick={(e) => {
-          increment();
-        }}
-      >
-        Increment by 1
-      </button>
-      <button
-        onClick={(e) => {
-          decrement();
-        }}
-      >
-        Decrement by 1
-      </button>
+      <div>
+        <button
+          onClick={(e) => {
+            increment();
+          }}
+        >
+          Increment by 1
+        </button>
+        &nbsp;
+        <button
+          onClick={(e) => {
+            decrement();
+          }}
+        >
+          Decrement by 1
+        </button>
+      </div>
+      <br />
+
+      <Link to="/details">Jump to details component</Link>
     </>
   );
 };

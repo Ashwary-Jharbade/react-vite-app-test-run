@@ -1,8 +1,9 @@
-import WrappedCounter from "./components/Counter";
+import Navigation from "./Navigation";
+
 function App() {
   return (
     <>
-      <WrappedCounter></WrappedCounter>
+      <Navigation></Navigation>
     </>
   );
 }
