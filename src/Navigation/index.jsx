@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import WrappedCounter from "../components/Counter";
 import Details from "../components/Details";
-import CounterSub from "../components/CounterSub";
+import CounterMultiplier from "../components/CounterMultiplier";
 
 const Navigation = () => {
   return (
@@ -10,7 +10,7 @@ const Navigation = () => {
         <Routes>
           <Route path="/" element={<WrappedCounter />}></Route>
           <Route path="/details" element={<Details />}></Route>
-          <Route path="/countersub" element={<CounterSub />}></Route>
+          <Route path="/countersub" element={<CounterMultiplier />}></Route>
         </Routes>
       </BrowserRouter>
     </>
