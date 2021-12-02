@@ -12,7 +12,9 @@ export default (props) => {
       </div>
       <br />
       <div>
-        <Link to="/">Go back to counter component</Link>
+        <Link to="/">Go to counter component</Link>
+        <br />
+        <Link to="/countersub">Go to CounterSub component</Link>
       </div>
     </>
   );

@@ -24,8 +24,9 @@ const Counter = (props) => {
         </button>
       </div>
       <br />
-
       <Link to="/details">Jump to details component</Link>
+      <br />
+      <Link to="/countersub">Go to CounterSub component</Link>
     </>
   );
 };
