@@ -1,4 +1,4 @@
-import MovieList from "./components/MovieList.jsx";
+import MovieList from "./components/MovieList";
 function App() {
   return (
     <>
