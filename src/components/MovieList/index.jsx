@@ -1,28 +1,22 @@
 import { useState } from "react";
 import { Button, Input } from "reactstrap";
-import getData from "../../providers/network/getData";
+import { useSelector, useDispatch } from "react-redux";
+import { movieListLoadingAction } from "./actions";
 import "./index.css";
+
 const MovieList = () => {
   const [searchText, setSearchText] = useState(2017);
-  const [movieList, setMovieList] = useState([]);
-  const [pages, setPages] = useState(0);
+  const dispatch = useDispatch();
+  const { movieListReducer } = useSelector((state) => {
+    return state;
+  });
+  const { isLoading, movieList } = movieListReducer;
   const _onChangeInputHandler = (e) => {
     if (!e?.target) {
       return;
     }
     const { value } = e.target;
     setSearchText(Number(value));
-  };
-  const _onMovieSearchHandler = async (e) => {
-    if (!e?.target) {
-      return;
-    }
-    const data = await getData(
-      `https://api.themoviedb.org/3/discover/movie?api_key={MANUALLY_WRITE_API_KEY_HERE}&primary_release_year=2017&sort_by=revenue.desc`
-    );
-    const { results, total_pages } = data;
-    setMovieList(results);
-    setPages(Number(total_pages));
   };
   return (
     <>
@@ -41,7 +35,9 @@ const MovieList = () => {
             onChange={_onChangeInputHandler}
           />
           <Button
-            onClick={_onMovieSearchHandler}
+            onClick={() => {
+              dispatch(movieListLoadingAction(searchText));
+            }}
             className="margin-10px"
             color="primary"
           >

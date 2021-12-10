@@ -2,10 +2,12 @@ const getData = async (url) => {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    console.log(result);
+    if (!result.results.length) {
+      return null;
+    }
     return result;
   } catch (error) {
-    return {};
+    return null;
   }
 };
 
