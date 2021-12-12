@@ -39,5 +39,26 @@
 }
 
 .card-container {
-  border-bottom: 2px solid black;
+  margin: 10px;
+  border: 1px solid rgb(161, 161, 161);
+  width: 200px;
+}
+
+.card-text {
+  padding: 5px;
+}
+
+.overview {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
 }

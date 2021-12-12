@@ -11,6 +11,12 @@ const MovieList = () => {
     return state;
   });
   const { isLoading, movieList } = movieListReducer;
+  const loaderStyle = {
+    textAlign: "center",
+    margin: "10px",
+    width: "100%",
+  };
+  const imgPrefix = "http://image.tmdb.org/t/p/w185/";
   const _onChangeInputHandler = (e) => {
     if (!e?.target) {
       return;
@@ -45,17 +51,36 @@ const MovieList = () => {
           </Button>
         </div>
       </div>
-      <div>
-        {movieList.map((item, index) => {
-          return (
-            <>
-              <div key={index} className="card-container">
-                <div>{item.original_title}</div>
-                <div>{item.title}</div>
-              </div>
-            </>
-          );
-        })}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+        }}
+      >
+        {isLoading ? (
+          <div style={loaderStyle}>Loading...</div>
+        ) : (
+          movieList.map((item, index) => {
+            console.log(item);
+            return (
+              <>
+                <div key={index} className="card-container">
+                  <div className="image-container">
+                    <img src={`${imgPrefix}${item.poster_path}`} alt="" />
+                  </div>
+                  <div className="card-text">
+                    <div>{item.title}</div>
+                    <div>Language: {item.original_language}</div>
+                    <div className="overview">Overview: {item.overview}</div>
+                    <div>Ratings: {item.vote_average}</div>
+                    <div>Release Date: {item.release_date}</div>
+                  </div>
+                </div>
+              </>
+            );
+          })
+        )}
       </div>
     </>
   );
